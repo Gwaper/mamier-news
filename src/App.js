@@ -1,23 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from "react";
+import FormTest from './components/form';
 
+
+
+
+const testDiv = (
+
+  <div>
+      <p>penis</p>
+  </div>
+)
+const testDiv2 = (
+  <div>
+      <p>penos</p>
+  </div>
+)
 function App() {
+  const [hidenDiv, setHidenDiv] = useState(false);
+
+  const toggleHiden = () => {
+      setHidenDiv(!hidenDiv)
+      console.log('test')
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <body>
+      <div>
+        <FormTest/>
+      </div>
+
+      </body>
     </div>
   );
 }
